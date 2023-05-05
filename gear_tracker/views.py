@@ -1,8 +1,6 @@
-from django.shortcuts import render
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
-from django.shortcuts import get_object_or_404
 from .models import Assignment, Company, Device, Employee
 from .serializers import (
     AssignmentSerializer,
