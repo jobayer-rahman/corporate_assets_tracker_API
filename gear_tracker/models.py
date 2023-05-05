@@ -9,7 +9,7 @@ class Company(models.Model):
 class Employee(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
-    email = models.EmailField()
+    email = models.EmailField(unique=True)
     company = models.ForeignKey(Company, on_delete=models.CASCADE)
 
     def __str__(self):
